@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #7251b5, #8187dc);
+  padding: 10px;
+}
+
+.todo-app {
+  width: 95%;
+  max-width: 700px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.todo-app .alert {
+  min-height: 30px;
+  background-color: #8187dc;
+}
+
+.alert p {
+  text-align: center;
+  line-height: 50px;
+  color: black;
+}
+
+.todo-app .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.logo h2 {
+  color: #3c096c;
+}
+
+.logo svg {
+  font-size: 35px;
+  color: #3c096c;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.field button {
+  border: none;
+  background-color: #c8b6ff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  transition: all 0.8s ease;
+}
+
+.field button:hover {
+  background-color: #8187dc;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 0px;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+}
+
+li svg {
+  font-size: 16px;
+}
+
+li .del {
+  position: absolute;
+  right: 0;
+  transition: all 0.5s ease;
+}
+
+li .del:hover {
+  color: #8187dc;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+  .todo-app {
+    padding: 30px 20px;
+    margin: 80px auto 20px;
+  }
+
+  .field {
+    padding-left: 15px;
+  }
+
+  .field input {
+    font-size: 12px;
+  }
+
+  .field button {
+    padding: 8px 20px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .todo-app {
+    padding: 20px;
+    margin: 60px auto 20px;
+  }
+
+  .field input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .field button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  ul li {
+    font-size: 12px;
+    padding: 10px 6px 10px 20px;
+  }
+}
